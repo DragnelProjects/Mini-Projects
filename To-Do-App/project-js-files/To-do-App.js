@@ -67,7 +67,6 @@ function showTask() {
     taskDiv.appendChild(deletBtn);
 
     taskList.appendChild(taskDiv);
-
   });
   function toCountTask() {
     let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
@@ -79,6 +78,6 @@ function showTask() {
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }
   toCountTask();
-};
+}
 
 addTask.addEventListener("click", addTasks);
