@@ -1,4 +1,7 @@
-const displayTime = document.getElementById("displayTime");
+const hourDiv=document.getElementById("hourDiv");
+const minDiv=document.getElementById("minDiv");
+const secDiv=document.getElementById("secDiv");
+const merdDiv=document.getElementById("merdDiv");
 const displayDate = document.getElementById("displayDate");
 const toggleBtn=document.getElementById("toggleBtn");
 let is24Hour=true;
@@ -9,15 +12,21 @@ function toUpdatedClock() {
   const minutes = date.getMinutes().toString().padStart(2, 0);
   const seconds = date.getSeconds().toString().padStart(2, 0);
 
+
   if(is24Hour){
     hours=hours.toString().padStart(2,0);
-    displayTime.innerText=`${hours}:${minutes}:${seconds} Hours`;
+    hourDiv.innerText=`${hours}`;
+    minDiv.innerText=`${minutes}`;
+    secDiv.innerText=`${seconds}`;
   }else{
-    let  merideium= hours >= 12 ? "PM": "Am";
+    let  merideium= hours >= 12 ? "PM": "AM";
     hours= hours % 12 || 12;
     hours= hours.toString().padStart(2,0);
 
-    displayTime.innerText=`${hours}:${minutes}:${seconds} ${merideium}`;
+    hourDiv.innerText=`${hours}`;
+    minDiv.innerText=`${minutes}`;
+    secDiv.innerText=`${seconds}`;
+    merdDiv.innerText=`${merideium}`;
   }
 }
  setInterval(toUpdatedClock, 1000);

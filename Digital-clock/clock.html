@@ -5,17 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="clock.css">
+     <link
+      href="https://cdn.boxicons.com/3.0.7/fonts/basic/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.boxicons.com/3.0.7/fonts/brands/boxicons-brands.min.css"
+      rel="stylesheet"
+    />
 </head>
 <body>
-    <div class="clock-box">
-        <div class="time-box">
-            <p id="displayTime">00 00 00</p>
-            <button id="toggleBtn">Change</button>
+    <div class="container">
+         <div class="clock-box">
+            <div id="hourDiv">00</div>
+            <div id="minDiv">00</div>
+            <div id="secDiv">00</div>
+            <div id="merdDiv"></div>
         </div>
         <div class="day-box">
             <p id="displayDate"></p>
         </div>
+    <div class="button-box">
+        <button id="toggleBtn">Change</button>
     </div>
+    </div>
+   
     <script src="clock.js"></script>
 </body>
 </html>
